@@ -1,0 +1,20 @@
+
+td.showable = @task.id
+td.showable = @task.title()
+td.showable = @task.date()
+td.showable = @task.get('is_complete')
+td.showable
+  .btn.js-show-form
+    i.fa.fa-pencil
+  button.close.js-destroy type="button" &times;
+td.editable.hidden = @task.id
+
+td.editable.hidden
+  input.form-control type="text" name="title" form="task#{@task.id}" value= @task.title()
+td.editable.hidden
+  input.form-control.datetimepicker type="text" name="task_at" form="task#{@task.id}" value= @task.date()
+td.editable.hidden
+  input.form-control type="checkbox" name="is_complete" form="task#{@task.id}" checked= @task.get('is_complete')
+td.editable.hidden
+  input.btn.btn-default.js-update form="task#{@task.id}" type="submit"
+form.edit-task id="task#{@task.id}"

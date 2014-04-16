@@ -1,0 +1,14 @@
+---
+chdir: "/var/www/todo_bb/current"
+environment: production
+timeout: 30
+wait: 30
+log: "/var/www/todo_bb/shared/log/thin.log"
+pid: "/tmp/thin.todo_bb.pid"
+max_conns: 1024
+max_persistent_conns: 100
+require: []
+threadpool_size: 20
+servers: 1
+daemonize: true
+socket: "/tmp/todo_bb.socket"

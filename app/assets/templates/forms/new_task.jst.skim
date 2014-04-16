@@ -1,0 +1,16 @@
+form#new_task.form-horizontal.col-md-4
+  .form-group
+    label for="title" Название
+    input.form-control type="text" name="title" placeholder="Заголовок"
+  .form-group
+    label for="task_at" Время задачи
+    input.form-control.datetimepicker type="text" name="task_at"
+  .form-group
+    .checkbox
+      label
+        input type="checkbox" name="is_complete" Выполнение
+  .form-group
+    button.btn.btn-primary type="submit"
+      i.fa.fa-plus
+
+

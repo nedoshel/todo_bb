@@ -1,0 +1,14 @@
+h2 привет
+
+table#tasks.table
+  thead
+    tr
+      th.col-md-1 id
+      th.col-md-3 title
+      th.col-md-2 task_at
+      th.col-md-1 is_complete
+      th.col-md-2
+
+  tbody
+
+== JST['forms/new_task']()
